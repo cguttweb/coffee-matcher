@@ -25,8 +25,12 @@ export default new Router({
     {
       path: "/origins",
       name: "origins",
-      // eslint-disable-next-line prettier/prettier
-      component: () => import('./views/Origins.vue')
+      component: () => import("./views/Origins.vue")
+    },
+    {
+      path: "/questions",
+      name: "questions",
+      component: () => import("./views/Questions.vue")
     }
   ]
 });

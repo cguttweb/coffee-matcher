@@ -3,11 +3,18 @@
     <div id="nav">
       <b-navbar class="justify-content-center text-white" variant="dark">
         <b-navbar-nav>
-          <b-nav-item> <router-link to="/">Home</router-link></b-nav-item>
-          <b-nav-item> <router-link to="/about">About</router-link></b-nav-item>
+          <b-nav-item>
+            <router-link to="/">Home</router-link>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link to="/about">About</router-link>
+          </b-nav-item>
           <b-nav-item
-            ><router-link to="/origins">Origins</router-link></b-nav-item
-          >
+            ><router-link to="/origins">Origins</router-link>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link to="/questions">Questions</router-link>
+          </b-nav-item>
         </b-navbar-nav>
       </b-navbar>
     </div>
@@ -16,7 +23,6 @@
 </template>
 
 <style lang="scss">
-
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
