@@ -29,14 +29,19 @@
           </h4>
         </b-col>
       </b-row>
+      <test />
     </b-container>
   </div>
 </template>
 
 <script>
+/* eslint-disable */
+import test from '../components/test.vue'
 export default {
   name: 'home',
-  components: {}
+  components: {
+    test
+  }
 };
 </script>
 
