@@ -1,4 +1,5 @@
 <template>
+<div>
   <div id="app">
     <div id="nav">
       <b-navbar class="justify-content-center text-white" variant="dark">
@@ -18,8 +19,10 @@
         </b-navbar-nav>
       </b-navbar>
     </div>
-    <router-view />
   </div>
+  <div id="component-demo">
+  </div>
+</div>
 </template>
 
 <style lang="scss">
