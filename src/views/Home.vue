@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <b-container class="bv-example-row">
-      <b-row>
-        <b-col>
+    <div class="container">
+      <div class="row">
+        <div class="col">
           <h1 class="mt-2">Welcome to Coffee Matcher</h1>
           <img
             alt="Coffee cup"
@@ -27,16 +27,15 @@
               >Answer some questions to be matched to a coffee</router-link
             >
           </h4>
-        </b-col>
-      </b-row>
-    </b-container>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'home',
-  components: {}
+  name: 'home'
 };
 </script>
 

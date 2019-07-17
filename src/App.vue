@@ -1,29 +1,25 @@
 <template>
 <div>
   <div id="app">
-    <div id="nav">
-      <b-navbar class="justify-content-center text-white" variant="dark">
-        <b-navbar-nav>
-          <b-nav-item>
+    <nav id="nav" class="justify-content-center text-white">
+        <ul>
+          <li class="nav-item">
             <router-link to="/">Home</router-link>
-          </b-nav-item>
-          <b-nav-item>
+          </li>
+          <li class="nav-item">
             <router-link to="/about">About</router-link>
-          </b-nav-item>
-          <b-nav-item
-            ><router-link to="/origins">Origins</router-link>
-          </b-nav-item>
-          <b-nav-item>
+          </li>
+          <li class="nav-item">
+            <router-link to="/origins">Origins</router-link>
+          </li>
+          <li class="nav-item">
             <router-link to="/questions">Questions</router-link>
-          </b-nav-item>
-        </b-navbar-nav>
-      </b-navbar>
-    </div>
-  </div>
-  <div id="component-demo">
+          </li>
+        </ul>
+    </nav>
+    <router-view></router-view>
   </div>
 </div>
-</template>
 
 <style lang="scss">
 #app {
