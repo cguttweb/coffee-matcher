@@ -1,24 +1,14 @@
 <template>
   <div id="app">
-    <nav id="nav" class="justify-content-center text-white">
-        <ul>
-          <li class="nav-item">
-            <router-link to="/">Home</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/about">About</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/origins">Origins</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/questions">Questions</router-link>
-          </li>
-        </ul>
-    </nav>
-    <router-view></router-view>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/origins">Coffee Origins</router-link> |
+      <router-link to="/questions">Questions</router-link>
+    </div>
+    <router-view />
   </div>
-</div>
+</template>
 
 <style lang="scss">
 #app {
@@ -27,9 +17,20 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  // margin-top: 60px;
 }
-.nav-item a {
+#nav {
+  background: #2c3e50;
   color: #ffffff;
+  padding: 30px;
+  a {
+    font-weight: bold;
+    color: #ffffff;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 </style>

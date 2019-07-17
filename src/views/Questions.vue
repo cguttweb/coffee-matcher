@@ -1,11 +1,13 @@
 <template>
   <div>
     <div class="container">
-      <input type="text"
+      <input
+        type="text"
         v-model="name"
         label="Enter your name"
-        placeholder="Enter your name" />
-      <h3 class="mt-2">Hello {{ text }}</h3>
+        placeholder="Enter your name"
+      />
+      <h3 class="mt-2">Hello {{ name }}</h3>
       <h4>Answer the following questions to be matched to a coffee</h4>
       <label for="questionone">Question One</label>
       <select name="questionone" v-model="questionone" class="mb-3">
