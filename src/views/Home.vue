@@ -34,6 +34,8 @@
 </template>
 
 <script>
+/* eslint-disable */
+import test from '../components/test.vue'
 export default {
   name: 'home'
 };

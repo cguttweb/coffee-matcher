@@ -1,5 +1,4 @@
 <template>
-<div>
   <div id="app">
     <nav id="nav" class="justify-content-center text-white">
         <ul>
