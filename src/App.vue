@@ -7,8 +7,13 @@
       <router-link to="/questions">Questions</router-link>
     </div>
     <router-view />
+    <test />
   </div>
 </template>
+
+<script>
+export default {};
+</script>
 
 <style lang="scss">
 #app {
