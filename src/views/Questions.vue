@@ -21,16 +21,25 @@
         <option value="yes">Yes</option>
         <option value="no">No</option>
       </select>
+      <CoffeeCard></CoffeeCard>
+      <CoffeeCard></CoffeeCard>
+      <CoffeeCard></CoffeeCard>
+      <CoffeeCard></CoffeeCard>
     </div>
   </div>
 </template>
 
 <script>
+import CoffeeCard from "@/components/CoffeeCard.vue";
+
 export default {
   data() {
     return {
       name: ""
     };
+  },
+  components: {
+    CoffeeCard
   }
 };
 </script>
