@@ -12,7 +12,12 @@
 </template>
 
 <script>
-export default {};
+import test from './components/test.vue'
+export default {
+  components: {
+    test
+  }
+};
 </script>
 
 <style lang="scss">
