@@ -7,22 +7,16 @@
       <router-link to="/questions">Questions</router-link>
     </div>
     <router-view />
-    <test />
   </div>
 </template>
 
 <script>
-import test from './components/test.vue'
-export default {
-  components: {
-    test
-  }
-};
+export default {};
 </script>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
