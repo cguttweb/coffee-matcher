@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import Icon from "@/components/Icon.vue";
+import Icon from '@/components/Icon.vue';
 export default {
-  name: "home",
+  name: 'home',
   components: {
     Icon
   }
