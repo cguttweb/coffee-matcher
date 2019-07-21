@@ -1,0 +1,81 @@
+[
+  {
+    "coffees": {
+      "espresso": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "ristresso": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "latte": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "cappuccino": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "mocha": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "cortado": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "americano": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "macchiato": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "espresso con panna": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "piccolo": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "flat white": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "lungo": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "affogato": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "espresso martini": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      },
+      "cold brew": {
+        "name": "",
+        "description": "",
+        "photo": ""
+      }
+    }
+  }
+]

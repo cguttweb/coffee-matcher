@@ -1,6 +1,10 @@
-/* Info to be included
-- Coffee Name
-- Description
-- Photo?
-- Type of coffee?
-*/
+const coffees = [
+  {
+    espresso: {
+      name: "espresso",
+      description: "",
+      photo: ""
+    }
+  }
+];
+console.log(coffees);
