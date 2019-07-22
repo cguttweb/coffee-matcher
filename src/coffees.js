@@ -1,9 +1,9 @@
 const coffees = [
   {
     espresso: {
-      name: "espresso",
-      description: "",
-      photo: ""
+      name: 'espresso',
+      description: '',
+      photo: ''
     }
   }
 ];
