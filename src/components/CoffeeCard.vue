@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="card" style="width: 18rem;">
-      <img :src=photo class="card-img-top" alt="photo of coffee" />
+      <img :src="photo" class="card-img-top" alt="photo of coffee" />
       <div class="card-body">
         <h5 class="card-title" :name="coffeename"></h5>
-        <p class="card-text" :description=description></p>
+        <p class="card-text" :description="description"></p>
         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
       </div>
     </div>
@@ -12,97 +12,88 @@
 </template>
 
 <script>
-import '../coffees.js';
-
 export default {
   name: 'CoffeeCard',
-  data(){
+  data() {
     return {
       coffees: [
-      {
-        espresso: {
+        {
           name: 'espresso',
           description: '',
           photo: ''
         },
-        ristresso: {
-        name: "",
-        description: "",
-        photo: ""
+        {
+          name: 'ristresso',
+          description: '',
+          photo: ''
         },
-        latte: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'latte',
+          description: '',
+          photo: ''
         },
-        cappuccino: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'cappuccino',
+          description: '',
+          photo: ''
         },
-        mocha: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'mocha',
+          description: '',
+          photo: ''
         },
-        cortado: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'cortado',
+          description: '',
+          photo: ''
         },
-        americano: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'americano',
+          description: '',
+          photo: ''
         },
-        macchiato: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'macchiato',
+          description: '',
+          photo: ''
         },
-        espresso con panna: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'espresso con panna',
+          description: '',
+          photo: ''
         },
-        piccolo: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'piccolo',
+          description: '',
+          photo: ''
         },
-        flat white: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'flat white',
+          description: '',
+          photo: ''
         },
-        lungo: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'lungo',
+          description: '',
+          photo: ''
         },
-        affogato: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'affogato',
+          description: '',
+          photo: ''
         },
-        espresso martini: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'espresso martini',
+          description: '',
+          photo: ''
         },
-        cold brew: {
-          name: "",
-          description: "",
-          photo: ""
+        {
+          name: 'cold brew',
+          description: '',
+          photo: ''
         }
-      }
-    ]
-    }
-  },
-  props: {
-    name: String,
-    description: String,
-    photo: String
+      ]
+    };
   }
 };
 </script>
