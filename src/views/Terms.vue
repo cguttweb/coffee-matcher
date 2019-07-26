@@ -10,9 +10,9 @@
       <li>
         Roasts:
         <ul>
-         <li><strong>Light</strong>- a light roast</li>
-         <li><strong>Medium</strong>- a medium roast</li>
-         <li><strong>Dark</strong>-a dark roast</li>
+          <li><strong>Light</strong>- a light roast</li>
+          <li><strong>Medium</strong>- a medium roast</li>
+          <li><strong>Dark</strong>-a dark roast</li>
         </ul>
       </li>
     </ul>
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "terms"
+  name: 'terms'
 };
 </script>
 

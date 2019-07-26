@@ -13,84 +13,84 @@
 
 <script>
 export default {
-  name: "CoffeeCard",
+  name: 'CoffeeCard',
   data() {
     return {
       coffees: [
         {
-          name: "espresso",
-          description: "",
-          photo: ""
+          name: 'espresso',
+          description: '',
+          photo: ''
         },
         {
-          name: "ristresso",
-          description: "",
-          photo: ""
+          name: 'ristresso',
+          description: '',
+          photo: ''
         },
         {
-          name: "latte",
-          description: "",
-          photo: ""
+          name: 'latte',
+          description: '',
+          photo: ''
         },
         {
-          name: "cappuccino",
-          description: "",
-          photo: ""
+          name: 'cappuccino',
+          description: '',
+          photo: ''
         },
         {
-          name: "mocha",
-          description: "",
-          photo: ""
+          name: 'mocha',
+          description: '',
+          photo: ''
         },
         {
-          name: "cortado",
-          description: "",
-          photo: ""
+          name: 'cortado',
+          description: '',
+          photo: ''
         },
         {
-          name: "americano",
-          description: "",
-          photo: ""
+          name: 'americano',
+          description: '',
+          photo: ''
         },
         {
-          name: "macchiato",
-          description: "",
-          photo: ""
+          name: 'macchiato',
+          description: '',
+          photo: ''
         },
         {
-          name: "espresso con panna",
-          description: "",
-          photo: ""
+          name: 'espresso con panna',
+          description: '',
+          photo: ''
         },
         {
-          name: "piccolo",
-          description: "",
-          photo: ""
+          name: 'piccolo',
+          description: '',
+          photo: ''
         },
         {
-          name: "flat white",
-          description: "",
-          photo: ""
+          name: 'flat white',
+          description: '',
+          photo: ''
         },
         {
-          name: "lungo",
-          description: "",
-          photo: ""
+          name: 'lungo',
+          description: '',
+          photo: ''
         },
         {
-          name: "affogato",
-          description: "",
-          photo: ""
+          name: 'affogato',
+          description: '',
+          photo: ''
         },
         {
-          name: "espresso martini",
-          description: "",
-          photo: ""
+          name: 'espresso martini',
+          description: '',
+          photo: ''
         },
         {
-          name: "cold brew",
-          description: "",
-          photo: ""
+          name: 'cold brew',
+          description: '',
+          photo: ''
         }
       ]
     };
