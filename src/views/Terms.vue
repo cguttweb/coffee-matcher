@@ -8,7 +8,7 @@
       <li>Blended coffee</li>
       <li>Speciality coffee</li>
       <li>
-        Roasts:
+        <strong>Roasts:</strong>
         <ul>
           <li><strong>Light</strong>- a light roast</li>
           <li><strong>Medium</strong>- a medium roast</li>

@@ -1,10 +1,14 @@
 <template>
   <div>
     <div class="card" style="width: 18rem;">
-      <img :src="photo" class="card-img-top" alt="photo of coffee" />
+      <img
+        src="https://via.placeholder.com/200x100"
+        class="card-img-top"
+        alt="photo of coffee"
+      />
       <div class="card-body">
-        <h5 class="card-title" :name="coffeename"></h5>
-        <p class="card-text" :description="description"></p>
+        <h5 class="card-title">{{ coffees.name }}</h5>
+        <p class="card-text">{{ description }}</p>
         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
       </div>
     </div>

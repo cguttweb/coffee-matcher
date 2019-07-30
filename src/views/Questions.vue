@@ -75,16 +75,6 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
-            <label for="questionsix">Question Six</label>
-            <select name="questionsix" v-model="questionsix" class="form-control mb-3">
-              <option :value="null">Please select an option</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
           <CoffeeCard></CoffeeCard>
         </div>
       </form>
