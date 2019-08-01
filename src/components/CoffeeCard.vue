@@ -7,8 +7,10 @@
         alt="photo of coffee"
       />
       <div class="card-body">
-        <h5 class="card-title">{{ coffees.name }}</h5>
-        <p class="card-text">{{ description }}</p>
+        <h5 class="card-title" v-for="coffee in coffees" v-bind:key="coffee">
+          {{ coffees.name }}
+        </h5>
+        <p class="card-text"></p>
         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
       </div>
     </div>
@@ -83,7 +85,7 @@ export default {
         },
         {
           name: 'affogato',
-          description: '',
+          description: 'a shot of espresso poured over ice cream',
           photo: ''
         },
         {
