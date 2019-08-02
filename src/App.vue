@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/origins">Coffee Origins</router-link> |
+      <router-link to="/origins">Origins</router-link> |
       <router-link to="/terms">Terms</router-link> |
       <router-link to="/questions">Questions</router-link>
     </div>
@@ -16,7 +16,7 @@ export default {};
 
 <style lang="scss">
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
