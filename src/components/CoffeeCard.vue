@@ -4,8 +4,7 @@
       class="card"
       style="width: 18rem;"
       v-for="(coffee, index) in coffees"
-      :key="index"
-    >
+      :key="index">
       <img :src="coffee.photo" class="card-img-top" alt="photo of coffee" />
       <div class="card-body">
         <h5 class="card-title">{{ coffee.name }}</h5>
@@ -16,17 +15,19 @@
 </template>
 
 <script>
+// import coffees from '../coffees.js';
+
 const coffees = [
   {
     name: "espresso",
-    description: "strong coffee with a good crema",
+    description: "strong coffee with a good crema forms the base of many other drinks",
     photo:
       "https://www.lavazza.co.uk/content/dam/lavazza/magazine/coffee-culture/the-coffee-book/espresso/lavazza-coffeebook-ecomeespresso-imgdx-d.png.transform/null/19df145319e179900947f02e36f8874cc3ba2a8e/img.png"
   },
   {
     name: "ristresso",
     description:
-      "stronger than an espresso seem as the perfect espresso by some",
+      "stronger than an espresso seen as the perfect espresso by some",
     photo: ""
   },
   {

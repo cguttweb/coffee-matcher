@@ -77,6 +77,7 @@
 
 <script>
 import CoffeeCard from '@/components/CoffeeCard.vue';
+// import '../coffees.js'
 
 export default {
   data() {
