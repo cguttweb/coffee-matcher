@@ -1,4 +1,4 @@
-const coffees = [
+export default [
   {
     name: "espresso",
     description: "strong coffee with a good crema forms the base of many other drinks",

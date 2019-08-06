@@ -64,11 +64,8 @@
             </select>
           </div>
         </div>
-        <div
-          class="row"
-          v-if="questionone && questiontwo && questionthree && questionfour"
-        >
-          <CoffeeCard />
+        <div class="row" v-if="questionone && questiontwo && questionthree && questionfour">
+          <CoffeeCard :coffee="coffee" />
         </div>
       </form>
     </div>
@@ -77,7 +74,7 @@
 
 <script>
 import CoffeeCard from '@/components/CoffeeCard.vue';
-// import '../coffees.js'
+import coffees from '../coffees.js'
 
 export default {
   data() {
@@ -92,6 +89,11 @@ export default {
   },
   components: {
     CoffeeCard
+  },
+  computed: {
+    coffee(){
+      return coffee[0]
+    }
   }
 };
 </script>
