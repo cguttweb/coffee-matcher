@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div
-      class="card"
-      style="width: 18rem;">
+    <div class="card" style="width: 18rem;">
       <img :src="coffee.photo" class="card-img-top" alt="photo of coffee" />
       <div class="card-body">
         <h5 class="card-title">{{ coffee.name }}</h5>
@@ -13,9 +11,8 @@
 </template>
 
 <script>
-
 export default {
-  name: "CoffeeCard",
+  name: 'CoffeeCard',
   props: ['coffee']
 };
 </script>
