@@ -28,6 +28,7 @@
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
+            <span>Question One answer: {{ questionone }}</span>
           </div>
         </div>
         <div class="row" v-if="questionone">
@@ -38,6 +39,7 @@
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
+            <span>Question Two answer: {{ questiontwo }}</span>
           </div>
         </div>
         <div class="row" v-if="questiontwo">
@@ -46,12 +48,12 @@
             <select
               name="questionthree"
               v-model="questionthree"
-              class="form-control mb-3"
-            >
+              class="form-control mb-3">
               <option :value="null">Please select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
+            <span>Question Three answer: {{ questionthree }}</span>
           </div>
         </div>
         <div class="row" v-if="questionthree">
@@ -62,6 +64,7 @@
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
+            <span>Question Four answer: {{ questionfour }}</span>
           </div>
         </div>
         <div class="row" v-if="questionone && questiontwo && questionthree && questionfour">
@@ -91,8 +94,11 @@ export default {
     CoffeeCard
   },
   computed: {
+    // filter the array of coffees based on what the answers are if all yes show this if all no show this else 
     coffee(){
-      return coffee[0]
+      // if(this.questionone.selected === "yes"){
+       return coffees[0];
+      // }
     }
   }
 };
