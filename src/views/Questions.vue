@@ -96,9 +96,11 @@ export default {
   computed: {
     // filter the array of coffees based on what the answers are if all yes show this if all no show this else 
     coffee(){
-      // if(this.questionone.selected === "yes"){
+      if(this.questionone === "yes"){
        return coffees[0];
-      // }
+      } else {
+        return coffees[1];
+      }
     }
   }
 };
