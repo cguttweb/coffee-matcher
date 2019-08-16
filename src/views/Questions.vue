@@ -48,7 +48,8 @@
             <select
               name="questionthree"
               v-model="questionthree"
-              class="form-control mb-3">
+              class="form-control mb-3"
+            >
               <option :value="null">Please select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -67,7 +68,10 @@
             <span>Question Four answer: {{ questionfour }}</span>
           </div>
         </div>
-        <div class="row" v-if="questionone && questiontwo && questionthree && questionfour">
+        <div
+          class="row"
+          v-if="questionone && questiontwo && questionthree && questionfour"
+        >
           <CoffeeCard :coffee="coffee" />
         </div>
       </form>
@@ -77,7 +81,7 @@
 
 <script>
 import CoffeeCard from '@/components/CoffeeCard.vue';
-import coffees from '../coffees.js'
+import coffees from '../coffees.js';
 
 export default {
   data() {
@@ -94,12 +98,12 @@ export default {
     CoffeeCard
   },
   computed: {
-    // filter the array of coffees based on what the answers are if all yes show this if all no show this else 
-    coffee(){
-      if(this.questionone === "yes"){
-       return coffees[0];
+    // filter the array of coffees based on what the answers are if all yes show this if all no show this else
+    coffee() {
+      if (this.questionone === 'yes') {
+        return coffees[0];
       } else {
-        return coffees[1];
+        return coffees[2];
       }
     }
   }
