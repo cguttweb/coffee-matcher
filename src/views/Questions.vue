@@ -59,7 +59,7 @@
         </div>
         <div class="row" v-if="questionthree">
           <div class="col">
-            <label for="questionfour">Do you have your own coffee machine?</label>
+            <label for="questionfour">Do you drink coffee regularly?</label>
             <select name="questionfour" v-model="questionfour" class="form-control mb-3">
               <option :value="null">Please select an option</option>
               <option value="yes">Yes</option>
@@ -68,11 +68,8 @@
             <span>Question Four answer: {{ questionfour }}</span>
           </div>
         </div>
-        <div
-          class="row"
-          v-if="questionone && questiontwo && questionthree && questionfour"
-        >
-          <CoffeeCard :coffee="coffee" />
+        <div class="row" v-if="questionone && questiontwo && questionthree && questionfour">
+          <CoffeeCard v-if="coffee()" :coffee="coffee" />
         </div>
       </form>
     </div>
@@ -100,7 +97,7 @@ export default {
   computed: {
     // filter the array of coffees based on what the answers are if all yes show this if all no show this else
     coffee() {
-      if (this.questionone === 'yes') {
+      if (this.questionone === 'yes' && this.questionfour === 'yes') {
         return coffees[0];
       } else {
         return coffees[2];
