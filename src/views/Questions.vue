@@ -4,6 +4,7 @@
       <form action>
         <div class="row">
           <div class="col">
+            <label for="name"><h3>Please enter your name</h3></label>
             <input
               type="text"
               v-model="name"
@@ -22,12 +23,8 @@
             <h4 class="pb-2">
               Answer the following questions to be matched to a coffee
             </h4>
-            <label for="questionone">Do you like your coffee strong?</label>
-            <select
-              name="questionone"
-              v-model="questionone"
-              class="form-control mb-3"
-            >
+            <label for="questionone">Do you drink coffee regularly?</label>
+            <select name="questionone" v-model="questionone" class="form-control mb-3">
               <option :value="null">Please select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -37,12 +34,8 @@
         </div>
         <div class="row" v-if="questionone">
           <div class="col">
-            <label for="questiontwo">Do you like milk in your coffee?</label>
-            <select
-              name="questiontwo"
-              v-model="questiontwo"
-              class="form-control mb-3"
-            >
+            <label for="questiontwo">Do you like your coffee strong?</label>
+            <select name="questiontwo" v-model="questiontwo" class="form-control mb-3">
               <option :value="null">Please select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -52,12 +45,11 @@
         </div>
         <div class="row" v-if="questiontwo">
           <div class="col">
-            <label for="questionthree">Do you like iced coffee?</label>
+            <label for="questionthree">Do you like milk in your coffee?</label>
             <select
               name="questionthree"
               v-model="questionthree"
-              class="form-control mb-3"
-            >
+              class="form-control mb-3">
               <option :value="null">Please select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -67,12 +59,8 @@
         </div>
         <div class="row" v-if="questionthree">
           <div class="col">
-            <label for="questionfour">Do you drink coffee regularly?</label>
-            <select
-              name="questionfour"
-              v-model="questionfour"
-              class="form-control mb-3"
-            >
+            <label for="questionfour">Do you like iced coffee?</label>
+            <select name="questionfour" v-model="questionfour" class="form-control mb-3">
               <option :value="null">Please select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -80,10 +68,20 @@
             <span>Question Four answer: {{ questionfour }}</span>
           </div>
         </div>
+        <!-- <div class="row" v-if="questionfour">
+          <div class="col">
+            <label for="questionfive"></label>
+            <select name="questionfive" v-model="questionfive" class="form-control mb-3">
+              <option :value="null">Please select an option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            <span>Question Five answer: {{ questionfive }}</span>
+          </div>
+        </div> -->
         <div
           class="row"
-          v-if="questionone && questiontwo && questionthree && questionfour"
-        >
+          v-if="questionone && questiontwo && questionthree && questionfour">
           <CoffeeCard :coffee="coffee" />
         </div>
       </form>
@@ -92,18 +90,18 @@
 </template>
 
 <script>
-import CoffeeCard from "@/components/CoffeeCard.vue";
-import coffees from "../coffees.js";
+import CoffeeCard from '@/components/CoffeeCard.vue';
+import coffees from '../coffees.js';
 
 export default {
   data() {
     return {
-      name: "",
-      questionone: "",
-      questiontwo: "",
-      questionthree: "",
-      questionfour: "",
-      questionfive: ""
+      name: '',
+      questionone: '',
+      questiontwo: '',
+      questionthree: '',
+      questionfour: '',
+      questionfive: ''
     };
   },
   components: {
@@ -112,7 +110,7 @@ export default {
   computed: {
     // filter the array of coffees based on what the answers are if all yes show this if all no show this else
     coffee() {
-      if (this.questionone === "yes" && this.questionfour === "yes") {
+      if (this.questionone === 'yes' && this.questionfour === 'yes') {
         return coffees[0];
       } else {
         return coffees[2];
