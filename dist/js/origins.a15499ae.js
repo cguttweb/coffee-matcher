@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["origins"],{cd58:function(e,n,i){"use strict";i.r(n);var o=function(){var e=this,n=e.$createElement;e._self._c;return e._m(0)},t=[function(){var e=this,n=e.$createElement,i=e._self._c||n;return i("div",{staticClass:"origins"},[i("h1",[e._v("The origins of coffee")]),i("p",[e._v("The origins of coffee production go back a long time.")])])}],r={name:"origins"},s=r,c=i("2877"),a=Object(c["a"])(s,o,t,!1,null,null,null);n["default"]=a.exports}}]);
+//# sourceMappingURL=origins.a15499ae.js.map
