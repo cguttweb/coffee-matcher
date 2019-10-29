@@ -83,6 +83,7 @@
           class="row"
           v-if="questionone && questiontwo && questionthree && questionfour">
           <CoffeeCard :coffee="coffee" />
+          <CoffeeCard :coffee="coffee" />
         </div>
       </form>
     </div>
@@ -110,7 +111,7 @@ export default {
   computed: {
     // filter the array of coffees based on what the answers are if all yes show this if all no show this else
     coffee() {
-      if (this.questionone === 'yes' && this.questionfour === 'yes') {
+      if (this.questionone === 'yes' && this.questiontwo === 'yes') {
         return coffees[0];
       } else {
         return coffees[2];
