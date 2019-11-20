@@ -4,7 +4,7 @@
       <form action>
         <div class="row">
           <div class="col">
-            <label for="name"><h3>Please enter your name</h3></label>
+            <label for="name"><h4>Please enter your name</h4></label>
             <input
               type="text"
               v-model="name"
@@ -57,7 +57,7 @@
             <span>Question Three answer: {{ questionthree }}</span>
           </div>
         </div>
-        <div class="row" v-if="questionthree">
+        <!-- <div class="row" v-if="questionthree">
           <div class="col">
             <label for="questionfour">Do you like iced coffee?</label>
             <select name="questionfour" v-model="questionfour" class="form-control mb-3">
@@ -67,7 +67,7 @@
             </select>
             <span>Question Four answer: {{ questionfour }}</span>
           </div>
-        </div>
+        </div> -->
         <!-- <div class="row" v-if="questionfour">
           <div class="col">
             <label for="questionfive"></label>
@@ -81,9 +81,11 @@
         </div> -->
         <div
           class="row"
-          v-if="questionone && questiontwo && questionthree && questionfour">
-          <CoffeeCard :coffee="coffee" />
-          <CoffeeCard :coffee="coffee" />
+          v-if="questionone && questiontwo && questionthree">
+          <CoffeeCard :coffee="getCoffee">
+            <slot></slot>
+          </CoffeeCard>
+        <!-- <CoffeeCard :coffee="coffee" /> -->
         </div>
       </form>
     </div>
@@ -110,12 +112,16 @@ export default {
   },
   computed: {
     // filter the array of coffees based on what the answers are if all yes show this if all no show this else
-    coffee() {
-      if (this.questionone === 'yes' && this.questiontwo === 'yes') {
-        return coffees[0];
-      } else {
-        return coffees[2];
-      }
+    getCoffee() {
+        // return coffees[1];
+        return coffees.forEach(coffee => {
+          console.log(coffees.name);
+        })
+      // if (this.questionone === 'yes' && this.questiontwo === 'yes') {
+      //   return coffees[0];
+      // } else {
+      //   return coffees[2];
+      // }
     }
   }
 };
