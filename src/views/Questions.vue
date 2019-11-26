@@ -85,7 +85,7 @@
           <CoffeeCard :coffee="getCoffee">
             <slot></slot>
           </CoffeeCard>
-        <!-- <CoffeeCard :coffee="coffee" /> -->
+        <CoffeeCard :coffee="getCoffee" />
         </div>
       </form>
     </div>
@@ -114,9 +114,9 @@ export default {
     // filter the array of coffees based on what the answers are if all yes show this if all no show this else
     getCoffee() {
         // return coffees[1];
-        return coffees.forEach(coffee => {
-          console.log(coffees.name);
-        })
+        // return coffees.forEach(coffee => {
+        //   console.log(coffees.name);
+        // })
       // if (this.questionone === 'yes' && this.questiontwo === 'yes') {
       //   return coffees[0];
       // } else {
