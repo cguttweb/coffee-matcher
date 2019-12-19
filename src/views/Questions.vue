@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="container">
+      <div class="row"></div>
       <form action>
         <div class="row">
           <div class="col">
@@ -49,7 +50,8 @@
             <select
               name="questionthree"
               v-model="questionthree"
-              class="form-control mb-3">
+              class="form-control mb-3"
+            >
               <option :value="null">Please select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -79,13 +81,30 @@
             <span>Question Five answer: {{ questionfive }}</span>
           </div>
         </div> -->
-        <div
-          class="row"
-          v-if="questionone && questiontwo && questionthree">
+        <!-- <SlotTest>
+          <template v-slot:header>
+            <h3>Here might be a page title</h3>
+          </template>
+
+          <p>A paragraph for the main content.</p>
+          <p>And another one.</p>
+
+          <template v-slot:footer>
+            <p>Here's some contact info</p>
+          </template>
+        </SlotTest> -->
+        <div class="row" v-if="questionone && questiontwo && questionthree">
           <CoffeeCard :coffee="getCoffee">
-            <slot></slot>
+            <template v-slot:image>
+              <img :src="coffee.photo" class="card-img-top" alt="photo of coffee" />
+            </template>
+            <template v-slot:coffeename>
+              <h5 class="card-title">{{ coffee.name }}</h5>
+            </template>
+            <template v-slot:description>
+              <p class="card-text">{{ coffee.description }}</p>
+            </template>
           </CoffeeCard>
-        <CoffeeCard :coffee="getCoffee" />
         </div>
       </form>
     </div>
@@ -94,6 +113,7 @@
 
 <script>
 import CoffeeCard from '@/components/CoffeeCard.vue';
+import SlotTest from '@/components/SlotTest.vue';
 import coffees from '../coffees.js';
 
 export default {
@@ -108,20 +128,13 @@ export default {
     };
   },
   components: {
-    CoffeeCard
+    CoffeeCard,
+    SlotTest
   },
   computed: {
     // filter the array of coffees based on what the answers are if all yes show this if all no show this else
     getCoffee() {
-        // return coffees[1];
-        // return coffees.forEach(coffee => {
-        //   console.log(coffees.name);
-        // })
-      // if (this.questionone === 'yes' && this.questiontwo === 'yes') {
-      //   return coffees[0];
-      // } else {
-      //   return coffees[2];
-      // }
+      return coffees[0];
     }
   }
 };
