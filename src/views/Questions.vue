@@ -81,30 +81,19 @@
             <span>Question Five answer: {{ questionfive }}</span>
           </div>
         </div> -->
-        <!-- <SlotTest>
-          <template v-slot:header>
-            <h3>Here might be a page title</h3>
-          </template>
-
-          <p>A paragraph for the main content.</p>
-          <p>And another one.</p>
-
-          <template v-slot:footer>
-            <p>Here's some contact info</p>
-          </template>
-        </SlotTest> -->
         <div class="row" v-if="questionone && questiontwo && questionthree">
           <CoffeeCard :coffee="getCoffee">
             <template v-slot:image>
-              <img :src="coffee.photo" class="card-img-top" alt="photo of coffee" />
+              <img src="" alt="" />
             </template>
             <template v-slot:coffeename>
-              <h5 class="card-title">{{ coffee.name }}</h5>
+              <h5 class="card-title">Coffee Name</h5>
             </template>
             <template v-slot:description>
               <p class="card-text">{{ coffee.description }}</p>
             </template>
           </CoffeeCard>
+          <CoffeeCard :coffee="getCoffee"> </CoffeeCard>
         </div>
       </form>
     </div>
@@ -113,7 +102,6 @@
 
 <script>
 import CoffeeCard from '@/components/CoffeeCard.vue';
-import SlotTest from '@/components/SlotTest.vue';
 import coffees from '../coffees.js';
 
 export default {
@@ -128,11 +116,10 @@ export default {
     };
   },
   components: {
-    CoffeeCard,
-    SlotTest
+    CoffeeCard
   },
   computed: {
-    // filter the array of coffees based on what the answers are if all yes show this if all no show this else
+    // filter the array of coffees based on what the answers are if all yes show this if all no show this else show something different....
     getCoffee() {
       return coffees[0];
     }
