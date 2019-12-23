@@ -84,13 +84,13 @@
         <div class="row" v-if="questionone && questiontwo && questionthree">
           <CoffeeCard :coffee="getCoffee">
             <template v-slot:image>
-              <img src="" alt="" />
+              <!-- <img src="" alt="" /> -->
             </template>
             <template v-slot:coffeename>
               <h5 class="card-title">Coffee Name</h5>
             </template>
             <template v-slot:description>
-              <p class="card-text">{{ coffee.description }}</p>
+              <p class="card-text">Description</p>
             </template>
           </CoffeeCard>
           <CoffeeCard :coffee="getCoffee"> </CoffeeCard>
@@ -105,6 +105,7 @@ import CoffeeCard from '@/components/CoffeeCard.vue';
 import coffees from '../coffees.js';
 
 export default {
+  props: ['coffee'],
   data() {
     return {
       name: '',
@@ -112,7 +113,8 @@ export default {
       questiontwo: '',
       questionthree: '',
       questionfour: '',
-      questionfive: ''
+      questionfive: '',
+      coffees: this.coffee
     };
   },
   components: {
