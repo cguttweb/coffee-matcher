@@ -46,7 +46,7 @@
         </div>
         <div class="row" v-if="questiontwo">
           <div class="col">
-            <label for="questionthree">Do you like milk in your coffee?</label>
+            <label for="questionthree">Do you take milk in your coffee?</label>
             <select
               name="questionthree"
               v-model="questionthree"
@@ -59,6 +59,18 @@
             <span>Question Three answer: {{ questionthree }}</span>
           </div>
         </div>
+        <!-- <SlotTest>
+          <template v-slot:header>
+            <h5>Here might be a page title</h5>
+          </template>
+
+          <p>A paragraph for the main content.</p>
+          <p>And another one.</p>
+
+          <template v-slot:footer>
+            <p>Here's some contact info</p>
+          </template>
+        </SlotTest> -->
         <!-- <div class="row" v-if="questionthree">
           <div class="col">
             <label for="questionfour">Do you like iced coffee?</label>
@@ -82,9 +94,10 @@
           </div>
         </div> -->
         <div class="row" v-if="questionone && questiontwo && questionthree">
-          <CoffeeCard :coffee="getCoffee">
+          <!-- dynamic components using <component></component> -->
+          <!-- <CoffeeCard :coffee="getCoffee">
             <template v-slot:image>
-              <!-- <img src="" alt="" /> -->
+              <img src="" alt="" />
             </template>
             <template v-slot:coffeename>
               <h5 class="card-title">Coffee Name</h5>
@@ -92,8 +105,13 @@
             <template v-slot:description>
               <p class="card-text">Description</p>
             </template>
+          </CoffeeCard> -->
+          <CoffeeCard
+            v-for="coffee in filteredCoffees"
+            :key="coffee.name"
+            :coffee="coffee"
+          >
           </CoffeeCard>
-          <CoffeeCard :coffee="getCoffee"> </CoffeeCard>
         </div>
       </form>
     </div>
@@ -105,7 +123,6 @@ import CoffeeCard from '@/components/CoffeeCard.vue';
 import coffees from '../coffees.js';
 
 export default {
-  props: ['coffee'],
   data() {
     return {
       name: '',
@@ -114,7 +131,7 @@ export default {
       questionthree: '',
       questionfour: '',
       questionfive: '',
-      coffees: this.coffee
+      coffees
     };
   },
   components: {
@@ -124,6 +141,9 @@ export default {
     // filter the array of coffees based on what the answers are if all yes show this if all no show this else show something different....
     getCoffee() {
       return coffees[0];
+    },
+    filteredCoffees() {
+      return coffees.slice(0, 5);
     }
   }
 };
