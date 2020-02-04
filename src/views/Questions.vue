@@ -25,7 +25,11 @@
               Answer the following questions to be matched to a coffee
             </h4>
             <label for="questionone">Do you drink coffee regularly?</label>
-            <select name="questionone" v-model="questionone" class="form-control mb-3">
+            <select
+              name="questionone"
+              v-model="questionone"
+              class="form-control mb-3"
+            >
               <option :value="null">Please select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -36,7 +40,11 @@
         <div class="row" v-if="questionone">
           <div class="col">
             <label for="questiontwo">Do you like your coffee strong?</label>
-            <select name="questiontwo" v-model="questiontwo" class="form-control mb-3">
+            <select
+              name="questiontwo"
+              v-model="questiontwo"
+              class="form-control mb-3"
+            >
               <option :value="null">Please select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -59,18 +67,6 @@
             <span>Question Three answer: {{ questionthree }}</span>
           </div>
         </div>
-        <!-- <SlotTest>
-          <template v-slot:header>
-            <h5>Here might be a page title</h5>
-          </template>
-
-          <p>A paragraph for the main content.</p>
-          <p>And another one.</p>
-
-          <template v-slot:footer>
-            <p>Here's some contact info</p>
-          </template>
-        </SlotTest> -->
         <!-- <div class="row" v-if="questionthree">
           <div class="col">
             <label for="questionfour">Do you like iced coffee?</label>
@@ -119,18 +115,18 @@
 </template>
 
 <script>
-import CoffeeCard from '@/components/CoffeeCard.vue';
-import coffees from '../coffees.js';
+import CoffeeCard from "@/components/CoffeeCard.vue";
+import coffees from "../coffees.js";
 
 export default {
   data() {
     return {
-      name: '',
-      questionone: '',
-      questiontwo: '',
-      questionthree: '',
-      questionfour: '',
-      questionfive: '',
+      name: "",
+      questionone: "",
+      questiontwo: "",
+      questionthree: "",
+      questionfour: "",
+      questionfive: "",
       coffees
     };
   },
