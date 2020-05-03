@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/questions">Questions</router-link>
+    <div id="header">
+      <h1>Coffee Matcher</h1>
     </div>
     <router-view />
   </div>
@@ -20,19 +19,10 @@ export default {};
   text-align: center;
   color: #2c3e50;
 }
-#nav {
+
+#header {
   background: #2c3e50;
   color: #ffffff;
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #ffffff;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-    &:hover {
-      text-decoration: none;
-    }
-  }
+  padding: 1rem;
 }
 </style>

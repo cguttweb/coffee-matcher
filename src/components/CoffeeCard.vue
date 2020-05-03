@@ -12,8 +12,8 @@
 
 <script>
 export default {
-  name: 'CoffeeCard',
-  props: ['coffee']
+  name: "CoffeeCard",
+  props: ["coffee"]
 };
 </script>
 
