@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <div class="container">
-      <div class="row"></div>
+      <div class="row">
+        <img src="../assets/espresso.png" width="200" />
+      </div>
       <form action>
         <div class="row">
           <div class="col">
