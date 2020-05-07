@@ -1,15 +1,16 @@
+/* eslint-disable prettier/prettier */
 export default [
   {
     name: "espresso",
     description:
       "strong coffee with a good crema forms the base of many other drinks",
-    photo: "./assets/espresso.png",
+    photo: "require('./assets/espresso.png')",
   },
   {
     name: "ristretto",
     description:
       "Ristretto means restricted or concentrated in Italian so this drink is a short shot of espresso made with half the amount of water compared to an espresso. It is seen as the perfect espresso by some.",
-    photo: "@/assets/ristresso.png",
+    photo: "./assets/ristresso.png",
   },
   {
     name: "latte",

@@ -139,9 +139,6 @@ export default {
   },
   computed: {
     // filter the array of coffees based on what the answers are if all yes show this if all no show this else show something different....
-    getCoffee() {
-      return coffees[0];
-    },
     filteredCoffees() {
       return coffees.slice(0, 20);
     }
