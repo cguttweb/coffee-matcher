@@ -1,9 +1,6 @@
 <template>
   <div class="home">
     <div class="container">
-      <div class="row">
-        <img src="../assets/espresso.png" width="200" />
-      </div>
       <form action>
         <div class="row">
           <div class="col">
@@ -71,17 +68,21 @@
             <span>Question Three answer: {{ questionthree }}</span>
           </div>
         </div>
-        <!-- <div class="row" v-if="questionthree">
+        <div class="row" v-if="questionthree">
           <div class="col">
             <label for="questionfour">Do you like iced coffee?</label>
-            <select name="questionfour" v-model="questionfour" class="form-control mb-3">
+            <select
+              name="questionfour"
+              v-model="questionfour"
+              class="form-control mb-3"
+            >
               <option :value="null">Please select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
             <span>Question Four answer: {{ questionfour }}</span>
           </div>
-        </div>-->
+        </div>
         <!-- <div class="row" v-if="questionfour">
           <div class="col">
             <label for="questionfive"></label>
@@ -93,19 +94,10 @@
             <span>Question Five answer: {{ questionfive }}</span>
           </div>
         </div>-->
-        <div class="row" v-if="questionone && questiontwo && questionthree">
-          <!-- dynamic components using <component></component> -->
-          <!-- <CoffeeCard :coffee="getCoffee">
-            <template v-slot:image>
-              <img src="" alt="" />
-            </template>
-            <template v-slot:coffeename>
-              <h5 class="card-title">Coffee Name</h5>
-            </template>
-            <template v-slot:description>
-              <p class="card-text">Description</p>
-            </template>
-          </CoffeeCard>-->
+        <div
+          class="row pt-3"
+          v-if="questionone && questiontwo && questionthree && questionfour"
+        >
           <CoffeeCard
             v-for="coffee in filteredCoffees"
             :key="coffee.name"
@@ -140,7 +132,16 @@ export default {
   computed: {
     // filter the array of coffees based on what the answers are if all yes show this if all no show this else show something different....
     filteredCoffees() {
-      return coffees.slice(0, 20);
+      if (
+        this.questionone === "yes" &&
+        this.questiontwo === "yes" &&
+        this.questionthree === "no"
+      ) {
+        return coffees.slice(0, 2);
+      } else {
+        return coffees.slice(0, 20);
+      }
+      // return coffees.slice(0, 20);
     }
   }
 };
