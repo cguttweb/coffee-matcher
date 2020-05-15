@@ -70,7 +70,9 @@
         </div>
         <div class="row" v-if="questionthree">
           <div class="col">
-            <label for="questionfour">Do you like iced coffee?</label>
+            <label for="questionfour"
+              >Do you take sugar or sweetener in your coffee?</label
+            >
             <select
               name="questionfour"
               v-model="questionfour"
@@ -83,20 +85,30 @@
             <span>Question Four answer: {{ questionfour }}</span>
           </div>
         </div>
-        <!-- <div class="row" v-if="questionfour">
+        <div class="row" v-if="questionfour">
           <div class="col">
-            <label for="questionfive"></label>
-            <select name="questionfive" v-model="questionfive" class="form-control mb-3">
+            <label for="questionfive">Do you like iced coffee?</label>
+            <select
+              name="questionfive"
+              v-model="questionfive"
+              class="form-control mb-3"
+            >
               <option :value="null">Please select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
             <span>Question Five answer: {{ questionfive }}</span>
           </div>
-        </div>-->
+        </div>
         <div
           class="row pt-3"
-          v-if="questionone && questiontwo && questionthree && questionfour"
+          v-if="
+            questionone &&
+              questiontwo &&
+              questionthree &&
+              questionfour &&
+              questionfive
+          "
         >
           <CoffeeCard
             v-for="coffee in filteredCoffees"
@@ -135,13 +147,15 @@ export default {
       if (
         this.questionone === "yes" &&
         this.questiontwo === "yes" &&
-        this.questionthree === "no"
+        this.questionthree === "no" &&
+        this.questionfour === "no"
       ) {
         return coffees.slice(0, 2);
+      } else if (this.questionfive === "yes") {
+        return coffees.slice(17, 1);
       } else {
         return coffees.slice(0, 20);
       }
-      // return coffees.slice(0, 20);
     }
   }
 };
