@@ -168,7 +168,7 @@ export default {
         this.questiontwo === "yes" &&
         this.questionthree === "no" &&
         this.questionfour === "no" &&
-        this.questionfive === "yes") {
+        this.questionfive === "no") {
         return coffees.slice(0, 12);
       }
     },
