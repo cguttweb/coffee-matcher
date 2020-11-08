@@ -1,29 +1,7 @@
 # coffee-matcher
 
-## Project setup
-```
-npm install
-```
+A small app built with vue-cli and bootstrap for styling. Answer questions to see related coffee options. 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### To Do
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- only basic logic so far for same base functionality mayhbe look at improving this
