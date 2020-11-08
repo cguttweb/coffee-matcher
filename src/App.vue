@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div id="header">
-      <h1>Coffee Matcher</h1>
+    <div>
+      <h1 class="py-2">Coffee Matcher</h1>
     </div>
     <router-view />
   </div>
@@ -17,12 +17,13 @@ export default {};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  // color: #2c3e50;
+  color: #4FC08D;
 }
 
-#header {
-  background: #2c3e50;
-  color: #ffffff;
-  padding: 1rem;
+h1 {
+  // background-color: #4FC08D;
+  background-color: #2c3e50;
+  font-variant: small-caps;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 15rem;">
       <img
         :src="coffee.photo"
         class="card-img-top"
@@ -10,6 +10,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ coffee.name }}</h5>
         <p class="card-text">{{ coffee.description }}</p>
+        <small v-html="coffee.photocredit"></small>
       </div>
     </div>
   </div>

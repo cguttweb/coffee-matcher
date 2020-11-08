@@ -1,17 +1,15 @@
 <template>
   <div class="home">
     <div class="container">
-      <form action>
+      <form>
         <div class="row">
           <div class="col">
-            <label for="name">
-              <h4>Please enter your name</h4>
-            </label>
             <input
+              class="form-control my-3 pl-2 py-1"
               type="text"
               v-model="name"
               label="Enter your name"
-              placeholder="Enter your name"
+              placeholder="Please enter your name"
             />
           </div>
         </div>
@@ -85,7 +83,7 @@
             <span>Question Four answer: {{ questionfour }}</span>
           </div>
         </div>
-        <div class="row" v-if="questionfour">
+         <div class="row" v-if="questionfour">
           <div class="col">
             <label for="questionfive">Do you like iced coffee?</label>
             <select
@@ -100,6 +98,20 @@
             <span>Question Five answer: {{ questionfive }}</span>
           </div>
         </div>
+        <div class="row" v-if="questionfive === 'yes'">
+          <div class="col py-3">
+            <label for="coldcoffees">Would you like to see cold coffees options?</label>
+            <select class="form-control mb-3" name="coldcoffees" id="coldcoffees" v-model="coldcoffees">
+              <option :value="null">Please select</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            <span>Selected cold coffees: {{ coldcoffees }}</span>
+          </div>
+        </div>
+        <div class="row pt-3" v-if="coldcoffees === 'yes'">
+          <CoffeeCard v-for="coffee in coldCoffees" :key="coffee.name" :coffee="coffee" />
+        </div>
         <div
           class="row pt-3"
           v-if="
@@ -108,8 +120,7 @@
               questionthree &&
               questionfour &&
               // eslint-disable-next-line prettier/prettier
-              questionfive
-          "
+              questionfive"
         >
           <CoffeeCard
             v-for="coffee in filteredCoffees"
@@ -136,7 +147,8 @@ export default {
       questionthree: "",
       questionfour: "",
       questionfive: "",
-      coffees
+      coffees,
+      coldcoffees: "",
     };
   },
   components: {
@@ -149,21 +161,29 @@ export default {
         this.questionone === "yes" &&
         this.questiontwo === "yes" &&
         this.questionthree === "no" &&
-        this.questionfour === "no"
+        this.questionfour === "no" &&
+        this.questionfive === 'no'
       ) {
         return coffees.slice(0, 2);
-      } else if (this.questionfive === "yes") {
-        return coffees.slice(17, 1);
-      } else {
-        return coffees.slice(0, 20);
+      } else if (this.questionone === "yes" &&
+        this.questiontwo === "yes" &&
+        this.questionthree === "no" &&
+        this.questionfour === "no" &&
+        this.questionfive === "yes") {
+        return coffees.slice(0, 12);
+      }
+    },
+    coldCoffees(){
+      if(this.coldcoffees === 'yes'){
+        return coffees.slice(13, 17);
       }
     }
   }
 };
 </script>
 
-<style lang="scss" scoped>
-label {
-  display: block;
+<style scoped>
+.home {
+  color: #2c3e50;
 }
 </style>
