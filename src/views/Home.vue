@@ -8,7 +8,6 @@
               class="form-control my-3 pl-2 py-1"
               type="text"
               v-model="name"
-              label="Enter your name"
               placeholder="Please enter your name"
             />
           </div>
