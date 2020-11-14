@@ -108,6 +108,7 @@
             <span>Selected cold coffees: {{ coldcoffees }}</span>
           </div>
         </div>
+        <!-- question about type of flavour e.g. mellow/smoky light/medium/dark roast -->
         <div class="row pt-3" v-if="coldcoffees === 'yes'">
           <CoffeeCard v-for="coffee in coldCoffees" :key="coffee.name" :coffee="coffee" />
         </div>
