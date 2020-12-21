@@ -135,7 +135,7 @@
 
 <script>
 import CoffeeCard from "@/components/CoffeeCard.vue";
-import coffees from "../coffees.js";
+import coffees from "@/coffees.js";
 
 export default {
   name: "home",
@@ -175,7 +175,8 @@ export default {
     },
     coldCoffees(){
       if(this.coldcoffees === 'yes'){
-        return coffees.slice(13, 17);
+        // return coffees.slice(13, 17);
+        return this.coffees.type === 'cold'
       }
     }
   }
