@@ -164,13 +164,13 @@ export default {
         this.questionfour === "no" &&
         this.questionfive === 'no'
       ) {
-        return coffees.slice(0, 2);
+        return coffees.slice(0, 4);
       } else if (this.questionone === "yes" &&
-        this.questiontwo === "yes" &&
+        this.questiontwo === "no" &&
         this.questionthree === "no" &&
         this.questionfour === "no" &&
         this.questionfive === "no") {
-        return coffees.slice(0, 12);
+        return coffees.slice(5, 13);
       }
     },
     coldCoffees(){

@@ -17,6 +17,22 @@ export default [
     type: "hot"
   },
   {
+    name: "macchiato",
+    description:
+      "In Italian macchiato means stained or spotted referring to the small amount of frothed milk used. Espresso coffee topped with a small amount of frothed milk.",
+    photo: "/images/espresso-macchiato.png",
+    photocredit: `<span>Photo from <a href="https://www.caffesociety.co.uk/">https://www.caffesociety.co.uk/</a> <a href="https://www.caffesociety.co.uk/assets/recipe-images/macchiato-small.jpg">here</a></span>`,
+    type: "hot"
+  },
+  {
+    name: "espresso con panna",
+    description:
+      "means espresso with cream in Italian a single or double espresso topped with whipped cream",
+    photo: "/images/con-panna.png",
+    photocredit: `<span>Photo from <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Caff%C3%A8_con_panna.jpg/220px-Caff%C3%A8_con_panna.jpg">Wikimedia</a></span>`,
+    type: "hot"
+  },
+  {
     name: "latte",
     description:
       "A drink made with espresso and steamed milk. Can be made with different types of milk e.g. soya, almond or coconut.",
@@ -54,22 +70,6 @@ export default [
       "Drink prepared by diluting an espresso with hot water resulting in a different flavour to traditionally brewed coffee.",
     photo: "/images/americano.png",
     photocredit: `<span>Photo from <a href="https://www.aroma-housewares.com/">https://www.aroma-housewares.com/</a> <a href="https://www.aroma-housewares.com/images/recipes/370/coffee.jpg">here</a></span>`,
-    type: "hot"
-  },
-  {
-    name: "macchiato",
-    description:
-      "In Italian macchiato means stained or spotted referring to the small amount of frothed milk used. Espresso coffee topped with a small amount of frothed milk.",
-    photo: "/images/espresso-macchiato.png",
-    photocredit: `<span>Photo from <a href="https://www.caffesociety.co.uk/">https://www.caffesociety.co.uk/</a> <a href="https://www.caffesociety.co.uk/assets/recipe-images/macchiato-small.jpg">here</a></span>`,
-    type: "hot"
-  },
-  {
-    name: "espresso con panna",
-    description:
-      "means espresso with cream in Italian a single or double espresso topped with whipped cream",
-    photo: "/images/con-panna.png",
-    photocredit: `<span>Photo from <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Caff%C3%A8_con_panna.jpg/220px-Caff%C3%A8_con_panna.jpg">Wikimedia</a></span>`,
     type: "hot"
   },
   {
