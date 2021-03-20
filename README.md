@@ -4,4 +4,4 @@ A small app built with vue-cli and bootstrap for styling. Answer questions to se
 
 ### To Do
 
-- only basic logic so far for same base functionality mayhbe look at improving this
+- only basic logic so far for same base functionality maybe look at improving this
