@@ -141,7 +141,7 @@ export default {
   name: "home",
   data() {
     return {
-      name: "",
+      name: '',
       questionone: "",
       questiontwo: "",
       questionthree: "",
@@ -176,7 +176,17 @@ export default {
     coldCoffees(){
       if(this.coldcoffees === 'yes'){
         // return coffees.slice(13, 17);
-        return this.coffees.type === 'cold'
+        // coffees.forEach(coffee => {
+        //   return coffee.type
+        // })
+        for (let i = 0; i < coffees.length; i++) {
+          console.log(coffees[i].type)
+          if(coffees[i].type === 'cold'){
+            return coffees.name
+          }
+          
+        }
+        // return this.coffees.type === 'cold'
       }
     }
   }
