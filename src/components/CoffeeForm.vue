@@ -2,65 +2,93 @@
 import { ref } from 'vue'
 
 const title = ref('Coffee Matcher')
+const question1 = ref('')
+const question2 = ref('')
+const question3 = ref('')
+const question4 = ref('')
+const question5 = ref('')
+const question6 = ref('')
+const question7 = ref('')
 </script>
 
 <template>
-  <h1 class="text-center text-2xl">{{ title }}</h1>
-  <form class="flex-col" action="#">
-    <label for="q1">Q1: Are you a regular coffee drinker?</label>
-    <select name="q1" id="q1">
-      <option value="null">Please Select</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
-    <label for="q2">Q2: Do you like your coffee strong? </label>
-    <select name="q2" id="q2">
-      <option value="null">Please Select</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
-    <label for="q3">Q3: Do you take milk in your coffee?</label>
-    <select name="q3" id="q3">
-      <option value="null">Please Select</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
-    <label for="q4">Q4: Do you take sugar or sweetener in your coffee?</label>
-    <select name="q4" id="q4">
-      <option value="null">Please Select</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
-    <label for="q5">Q5: Would you like to add a flavoured syrup?</label>
-    <select name="q5" id="q5">
-      <option value="null">Please Select</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
-    <label for="q6">Q6: Do you like iced coffee?</label>
-    <select name="q6" id="q6">
-      <option value="null">Please Select</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
-    <p>{{ q6 }}</p>
-    <label for="q7"
-      >Q7: Would you like to see the options for iced coffee?</label
-    >
-    <select name="q7" id="q7">
-      <option value="null">Please Select</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
-  </form>
+  <div class="mx-auto w-96">
+    <h1 class="text-center text-3xl">{{ title }}</h1>
+    <form class="flex-col" action="#">
+      <div>
+        <label for="q1">Are you a regular coffee drinker?</label>
+        <select name="q1" id="q1" v-model="question1">
+          <option value="">Please Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        Answer: {{ question1 }}
+      </div>
+      <div>
+        <label for="q2">Do you like your coffee strong? </label>
+        <select name="q2" id="q2" v-model="question2">
+          <option value="">Please Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        Answer: {{ question2 }}
+      </div>
+      <div>
+        <label for="q3">Do you take milk in your coffee?</label>
+        <select name="q3" id="q3" v-model="question3">
+          <option value="">Please Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        Answer: {{ question3 }}
+      </div>
+      <label for="q4">Do you take sugar or sweetener in your coffee?</label>
+      <select name="q4" id="q4" v-model="question4">
+        <option value="">Please Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      Answer: {{ question4 }}
+      <div v-if="question4 === 'yes'">
+        <label for="q5">Would you like to add a flavoured syrup?</label>
+        <select name="q5" id="q5">
+          <option value="">Please Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        Answer: {{ question5 }}
+      </div>
+      <div>
+        <label for="q6">Do you like iced coffee?</label>
+        <select name="q6" id="q6" v-model="question6">
+          <option value="">Please Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        Answer: {{ question6 }}
+      </div>
+      <div v-if="question6 === 'yes'">
+        <label for="q7"
+          >Would you like to see the options for iced coffee?</label
+        >
+        <select name="q7" id="q7" v-model="question7">
+          <option value="">Please Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        Answer: {{ question7 }}
+      </div>
+      <!-- once all questions are answered show coffee cards with matching options -->
+    </form>
+  </div>
 </template>
 
 <style scoped>
 label {
-  @apply block font-bold;
+  @apply block font-bold py-2;
 }
 
 select {
-  @apply border border-black w-2/5;
+  @apply border border-black p-2 w-full;
 }
 </style>
