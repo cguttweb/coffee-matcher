@@ -1,5 +1,7 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import CoffeeCard from './CoffeeCard.vue'
+import { coffees } from '../coffees'
 
 const title = ref('Coffee Matcher')
 const question1 = ref('')
@@ -7,8 +9,11 @@ const question2 = ref('')
 const question3 = ref('')
 const question4 = ref('')
 const question5 = ref('')
+const question5b = ref('')
 const question6 = ref('')
 const question7 = ref('')
+
+function coldCoffees() {}
 </script>
 
 <template>
@@ -51,12 +56,23 @@ const question7 = ref('')
       Answer: {{ question4 }}
       <div v-if="question4 === 'yes'">
         <label for="q5">Would you like to add a flavoured syrup?</label>
-        <select name="q5" id="q5">
+        <select name="q5" id="q5" v-model="question5">
           <option value="">Please Select</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
         Answer: {{ question5 }}
+      </div>
+      <div v-if="question5 === 'yes'">
+        <label for="q5b">Which flavour syrup would you like?</label>
+        <select name="q5b" id="q5b" v-model="question5b">
+          <option value="">Please Select</option>
+          <option value="caramel">Caramel</option>
+          <option value="gingerbread">Gingerbread</option>
+          <option value="hazelnut">Hazelnut</option>
+          <option value="vanilla">Vanilla</option>
+        </select>
+        Answer: {{ question5b }}
       </div>
       <div>
         <label for="q6">Do you like iced coffee?</label>
@@ -80,12 +96,19 @@ const question7 = ref('')
       </div>
       <!-- once all questions are answered show coffee cards with matching options -->
     </form>
+    <div v-if="question1 === 'yes'">
+      <CoffeeCard
+        v-for="coffee in coffees"
+        :key="coffee.name"
+        v-bind="coffee"
+      />
+    </div>
   </div>
 </template>
 
 <style scoped>
 label {
-  @apply block font-bold py-2;
+  @apply block py-2;
 }
 
 select {
