@@ -12,15 +12,6 @@ const question5 = ref('')
 const question5b = ref('')
 const question6 = ref('')
 const question7 = ref('')
-
-function coldCoffees() {
-  // if (question1 === 'yes') {
-  console.log('Coffees', coffees[0].name)
-  // }
-}
-
-coldCoffees()
-// console.log(coffees[0])
 </script>
 
 <template>
@@ -84,7 +75,12 @@ coldCoffees()
       </div>
       <div v-if="question5b === 'other'">
         <label for="othersyrup">Please specify</label>
-        <input type="text" name="othersyrup" id="othersyrup" />
+        <input
+          type="text"
+          name="othersyrup"
+          id="othersyrup"
+          class="focus:border-red-800"
+        />
       </div>
       <div>
         <label for="q6">Do you like iced coffee?</label>
@@ -109,10 +105,11 @@ coldCoffees()
       <!-- once all questions are answered show coffee cards with matching options -->
     </form>
   </div>
-  <div class="flex w-4/5" v-if="question1 === 'yes'">
+  <div class="mx-auto w-4/5" v-if="question7 === 'no'">
+    <p>Your matched coffees are:</p>
     <CoffeeCard v-for="coffee in coffees" :key="coffee.name" v-bind="coffee" />
   </div>
-  <div>
+  <div v-if="question7 === 'yes'">
     <CoffeeCard v-for="coffee in coldCoffees" :key="coffee.name" />
   </div>
 </template>
@@ -124,7 +121,7 @@ label {
 
 input[type='text'] {
   border-bottom: 1px solid #000000;
-  @apply p-2 w-96;
+  @apply outline-0 p-2 w-96;
 }
 
 select {

@@ -1,10 +1,10 @@
 <template>
   <div class="w-60">
     <img :src="photo" :alt="name" />
-    <h3>{{ name }}</h3>
-    <p>{{ description }}</p>
-    <p>{{ type }}</p>
-    <p>{{ credit }}</p>
+    <h3><span>Name:</span> {{ name }}</h3>
+    <p><span>Description:</span> {{ description }}</p>
+    <p><span>Type:</span> {{ type }}</p>
+    <p><span>Photo credit:</span> {{ credit }}</p>
   </div>
 </template>
 
@@ -18,4 +18,8 @@ const coffeeInfo = defineProps({
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+span {
+  @apply font-bold;
+}
+</style>
