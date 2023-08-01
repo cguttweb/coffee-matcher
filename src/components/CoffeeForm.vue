@@ -13,7 +13,14 @@ const question5b = ref('')
 const question6 = ref('')
 const question7 = ref('')
 
-function coldCoffees() {}
+function coldCoffees() {
+  // if (question1 === 'yes') {
+  console.log('Coffees', coffees[0].name)
+  // }
+}
+
+coldCoffees()
+// console.log(coffees[0])
 </script>
 
 <template>
@@ -71,8 +78,13 @@ function coldCoffees() {}
           <option value="gingerbread">Gingerbread</option>
           <option value="hazelnut">Hazelnut</option>
           <option value="vanilla">Vanilla</option>
+          <option value="other">Other</option>
         </select>
         Answer: {{ question5b }}
+      </div>
+      <div v-if="question5b === 'other'">
+        <label for="othersyrup">Please specify</label>
+        <input type="text" name="othersyrup" id="othersyrup" />
       </div>
       <div>
         <label for="q6">Do you like iced coffee?</label>
@@ -96,19 +108,23 @@ function coldCoffees() {}
       </div>
       <!-- once all questions are answered show coffee cards with matching options -->
     </form>
-    <div v-if="question1 === 'yes'">
-      <CoffeeCard
-        v-for="coffee in coffees"
-        :key="coffee.name"
-        v-bind="coffee"
-      />
-    </div>
+  </div>
+  <div class="flex w-4/5" v-if="question1 === 'yes'">
+    <CoffeeCard v-for="coffee in coffees" :key="coffee.name" v-bind="coffee" />
+  </div>
+  <div>
+    <CoffeeCard v-for="coffee in coldCoffees" :key="coffee.name" />
   </div>
 </template>
 
 <style scoped>
 label {
   @apply block py-2;
+}
+
+input[type='text'] {
+  border-bottom: 1px solid #000000;
+  @apply p-2 w-96;
 }
 
 select {

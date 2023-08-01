@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <img :src="image" :alt="name" />
+  <div class="w-60">
+    <img :src="photo" :alt="name" />
     <h3>{{ name }}</h3>
     <p>{{ description }}</p>
     <p>{{ type }}</p>
@@ -13,7 +13,7 @@ const coffeeInfo = defineProps({
   name: String,
   description: String,
   type: String,
-  image: String,
+  photo: String,
   credit: String,
 })
 </script>
