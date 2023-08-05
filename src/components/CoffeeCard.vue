@@ -4,7 +4,7 @@
     <h3><span>Name:</span> {{ name }}</h3>
     <p><span>Description:</span> {{ description }}</p>
     <p><span>Type:</span> {{ type }}</p>
-    <p><span>Photo credit:</span> {{ credit }}</p>
+    <p v-html="photocredit"></p>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ const coffeeInfo = defineProps({
   description: String,
   type: String,
   photo: String,
-  credit: String,
+  photocredit: String,
 })
 </script>
 

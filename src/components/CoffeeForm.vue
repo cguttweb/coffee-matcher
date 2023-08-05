@@ -12,6 +12,13 @@ const question5 = ref('')
 const question5b = ref('')
 const question6 = ref('')
 const question7 = ref('')
+const coldCoffees = []
+
+const getColdCoffees = coffees.forEach(coffee => {
+  if (coffee.type === 'cold') {
+    coldCoffees.push(coffee)
+  }
+})
 </script>
 
 <template>
@@ -75,12 +82,7 @@ const question7 = ref('')
       </div>
       <div v-if="question5b === 'other'">
         <label for="othersyrup">Please specify</label>
-        <input
-          type="text"
-          name="othersyrup"
-          id="othersyrup"
-          class="focus:border-red-800"
-        />
+        <input type="text" name="othersyrup" id="othersyrup" class="" />
       </div>
       <div>
         <label for="q6">Do you like iced coffee?</label>
@@ -105,12 +107,17 @@ const question7 = ref('')
       <!-- once all questions are answered show coffee cards with matching options -->
     </form>
   </div>
-  <div class="mx-auto w-4/5" v-if="question7 === 'no'">
+  <div class="mx-auto w-4/5" v-if="question6 === 'no' || question7 === 'no'">
     <p>Your matched coffees are:</p>
     <CoffeeCard v-for="coffee in coffees" :key="coffee.name" v-bind="coffee" />
   </div>
-  <div v-if="question7 === 'yes'">
-    <CoffeeCard v-for="coffee in coldCoffees" :key="coffee.name" />
+  <!-- Show cold coffee options -->
+  <div class="flex justify-around mt-10" v-if="question7 === 'yes'">
+    <CoffeeCard
+      v-for="coffee in coldCoffees"
+      :key="coffee.name"
+      v-bind="coffee"
+    />
   </div>
 </template>
 
