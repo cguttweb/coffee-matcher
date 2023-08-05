@@ -90,7 +90,7 @@ const coffees = [
     name: 'lungo',
     description:
       'Lungo means long in Italian made with an espresso machine but with twice as much water. Less strong but more bitter than an espresso',
-    photo: 'lungo.png',
+    photo: '/images/lungo.png',
     photocredit: `<span>Photo from <a href="https://www.nespresso.com">https://www.nespresso.com</a> <a href="https://www.nespresso.com/shared_res/mosaic_freehtml/images/coffees/ranges/lungo/big_cup.png">here</a></span>`,
     type: 'hot',
   },
