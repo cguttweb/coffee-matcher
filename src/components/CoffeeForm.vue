@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import CoffeeCard from './CoffeeCard.vue'
 import { coffees } from '../coffees'
 
@@ -14,6 +14,9 @@ const question6 = ref('')
 const question7 = ref('')
 const hotCoffees = []
 const coldCoffees = []
+const strongCoffees = []
+
+console.log(coffees)
 
 const getCoffees = coffees.forEach(coffee => {
   if (coffee.type === 'hot') {
@@ -24,6 +27,12 @@ const getCoffees = coffees.forEach(coffee => {
 const getColdCoffees = coffees.forEach(coffee => {
   if (coffee.type === 'cold') {
     coldCoffees.push(coffee)
+  }
+})
+
+const getStrongCoffees = coffees.forEach(coffee => {
+  if (coffee.name.includes('espresso') || coffee.name.includes('macchiato')) {
+    strongCoffees.push(coffee)
   }
 })
 </script>
@@ -120,6 +129,13 @@ const getColdCoffees = coffees.forEach(coffee => {
   >
     <CoffeeCard
       v-for="coffee in hotCoffees"
+      :key="coffee.name"
+      v-bind="coffee"
+    />
+  </div>
+  <div v-if="question2 === 'yes'">
+    <CoffeeCard
+      v-for="coffee in strongCoffees"
       :key="coffee.name"
       v-bind="coffee"
     />
