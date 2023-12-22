@@ -12,7 +12,7 @@ const question5 = ref('')
 const question5b = ref('')
 const question6 = ref('')
 const question7 = ref('')
-const hotCoffees = []
+const popularCoffees = []
 const coldCoffees = []
 const strongCoffees = []
 
@@ -20,7 +20,7 @@ console.log(coffees)
 
 const getCoffees = coffees.forEach(coffee => {
   if (coffee.type === 'hot') {
-    hotCoffees.push(coffee)
+    popularCoffees.push(coffee)
   }
 })
 
@@ -128,7 +128,7 @@ const getStrongCoffees = coffees.forEach(coffee => {
     v-if="question6 === 'no' || question7 === 'no'"
   >
     <CoffeeCard
-      v-for="coffee in hotCoffees"
+      v-for="coffee in popularCoffees"
       :key="coffee.name"
       v-bind="coffee"
     />

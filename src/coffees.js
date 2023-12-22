@@ -4,7 +4,7 @@ const coffees = [
     description:
       'strong coffee with a good crema forms the base of many other drinks',
     photo: '/images/espresso.png',
-    photocredit: `<span>Photo by <a href="https://unsplash.com/@nate_dumlao?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nathan Dumlao</a> on <a href="https://unsplash.com/s/photos/espresso?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>`,
+    photocredit: `<span>Photo by <a class="underline" href="https://unsplash.com/@nate_dumlao?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nathan Dumlao</a> on <a class="underline" href="https://unsplash.com/s/photos/espresso?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>`,
     type: 'hot',
   },
   {
@@ -12,7 +12,7 @@ const coffees = [
     description:
       'Ristretto means restricted or concentrated in Italian so this drink is a short shot of espresso made with half the amount of water compared to an espresso. It is seen as the perfect espresso by some.',
     photo: '/images/ristretto.png',
-    photocredit: `<span>Photo from <a href="https://http://minimoka.es/">minimoka.es</a><a href="http://minimoka.es/wp-content/uploads/2012/07/Ristretto.jpg">here</a></span>`,
+    photocredit: `<span>Photo from <a class="underline" href="https://http://minimoka.es/">minimoka.es</a><a class="underline" href="http://minimoka.es/wp-content/uploads/2012/07/Ristretto.jpg">here</a></span>`,
     type: 'hot',
   },
   {
@@ -20,7 +20,7 @@ const coffees = [
     description:
       'In Italian macchiato means stained or spotted referring to the small amount of frothed milk used. Espresso coffee topped with a small amount of frothed milk.',
     photo: '/images/espresso-macchiato.png',
-    photocredit: `<span>Photo from <a href="https://www.caffesociety.co.uk/">https://www.caffesociety.co.uk/</a> <a href="https://www.caffesociety.co.uk/assets/recipe-images/macchiato-small.jpg">here</a></span>`,
+    photocredit: `<span>Photo from <a class="underline" href="https://www.caffesociety.co.uk/">https://www.caffesociety.co.uk/</a> <a class="underline" href="https://www.caffesociety.co.uk/assets/recipe-images/macchiato-small.jpg">here</a></span>`,
     type: 'hot',
   },
   {
@@ -28,7 +28,7 @@ const coffees = [
     description:
       'means espresso with cream in Italian a single or double espresso topped with whipped cream',
     photo: '/images/con-panna.png',
-    photocredit: `<span>Photo from <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Caff%C3%A8_con_panna.jpg/220px-Caff%C3%A8_con_panna.jpg">Wikimedia</a></span>`,
+    photocredit: `<span>Photo from <a class="underline" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Caff%C3%A8_con_panna.jpg/220px-Caff%C3%A8_con_panna.jpg">Wikimedia</a></span>`,
     type: 'hot',
   },
   {
@@ -36,7 +36,7 @@ const coffees = [
     description:
       'A drink made with espresso and steamed milk. Can be made with different types of milk e.g. soya, almond or coconut.',
     photo: '/images/latte.png',
-    photocredit: `<span>Photo from <a href="https://www.whittard.co.uk">https://www.whittard.co.uk</a> <a href="https://www.whittard.co.uk/on/demandware.static/-/Sites-whittard-master-catalog/default/dw975b484c/images/hi-res/319806-soho_latte_glass_set-3.jpg">here</a></span>`,
+    photocredit: `<span>Photo from <a class="underline" href="https://www.whittard.co.uk">https://www.whittard.co.uk</a> <a href="https://www.whittard.co.uk/on/demandware.static/-/Sites-whittard-master-catalog/default/dw975b484c/images/hi-res/319806-soho_latte_glass_set-3.jpg">here</a></span>`,
     type: 'hot',
   },
   {
